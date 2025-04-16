@@ -8,7 +8,8 @@
 #include "test/bignum_codepath_check.h"
 #include "bignum_core_invasive.h"
 
-#if defined(MBEDTLS_TEST_HOOKS) && !defined(MBEDTLS_THREADING_C)
+//bjwt test
+//#if defined(MBEDTLS_TEST_HOOKS) && !defined(MBEDTLS_THREADING_C)
 int mbedtls_codepath_check = MBEDTLS_MPI_IS_TEST;
 
 static void mbedtls_codepath_take_safe(void)
@@ -35,4 +36,4 @@ void mbedtls_codepath_test_hooks_teardown(void)
     mbedtls_unsafe_codepath_hook = NULL;
 }
 
-#endif /* MBEDTLS_TEST_HOOKS && !MBEDTLS_THREADING_C */
+//#endif /* MBEDTLS_TEST_HOOKS && !MBEDTLS_THREADING_C */
